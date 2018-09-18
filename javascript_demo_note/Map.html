@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="1"></div>
+  <div id="2"></div>
+</body>
+<script>
+  // for(let i = 1; ; ++i){
+  //   var str = `${i}`;
+  //   console.log(str);
+  //   const div = document.getElementById(str);    
+  //   console.log(i, 'sunchao', div);
+  //   if(!div)break;
+  //   console.log(2, i);
+  // }
+  for(var i=1;i<5;i++){
+  }
+  console.log(i);
+  for(var j=6;j<10;++j){
+    // console.log(i);
+  }
+  console.log(j);
+
+  // Map 键可以是字符串，也可以是任何值
+  const map = new Map([
+    [name, '张三'],
+    [title, 'Author']
+  ]);
+  console.log(map.get('name'));
+  map.size // 2
+  map.has('name') // true
+  map.get('name') // "张三"
+  map.has('title') // true
+  map.get('title') // "Author"
+</script>
+</html>

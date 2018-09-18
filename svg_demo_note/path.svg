@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+<!-- 
+    以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+    M = moveto 原点
+    L = lineto 
+    H = horizontal lineto 水平直线 to
+    V = vertical lineto   垂直直线 to
+    C = curveto           曲线    to
+    S = smooth curveto    光滑的曲线 to
+    Q = quadratic Belzier curve  二次 Belzier 曲线
+    T = smooth quadratic Belzier curveto
+    A = elliptical Arc    椭圆狐
+    Z = closepath
+ -->
+<path d="M0 150 L150 250 L250 250 Z" />
+
+</svg>
