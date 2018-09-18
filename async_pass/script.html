@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 第一种方法
+  <script>
+    function message(data) {
+      console.log(data);
+    }
+  </script>
+  <script src="http://lexue100.com?callback=message"></script>
+   -->
+   <!-- 第二种方法 => 创建 script 标签 -->
+  <script type="text/javascript">
+    var messagetow = function (data) {
+      alert(data);
+    };
+    var url = "https://www.baidu.com/";
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    document.getElementsByTagName('head')[0].appendChild(script);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+<!-- 
+  跨子域
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    document.domain = 'lexue.com';
+    function test() {
+      const content = document.getElementById('iframe1').contentWindow;
+    }
+  
+  </script>
+  <iframe id="iframe1" src="http://b.lexue.com/b.html" frameborder="0" onload="test()"></iframe>
+</body>
+</html>
+
+<!-- b.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    document.domain = 'lexue.com';
+  </script>
+</head>
+<body>
+  <div> iframe 标签测试</div>
+</body>
+</html>

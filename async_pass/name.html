@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>跨域获取数据</title>
+  <script type="text/javascript">
+    function domainData(url, fn) {
+      var isFirst = true;
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      var loadfn = function () {
+        if (isFirst) {
+          iframe.contentWindow.location = 'http://a.com/proxy.html';
+          isFirst = false;
+        } else {
+          fn(iframe.contentWindow.name);
+          iframe.contentWindow.document.write('');
+          iframe.contentWindow.close();
+          document.body.removeChild(iframe);
+          iframe.src = '';
+          iframe = null;
+        }
+      };
+      iframe.src = url;
+      if (iframe.attachEvent) {
+        iframe.attachEvent('onload', loadfn);
+      } else {
+        iframe.onload = loadfn;
+      }
+
+      document.body.appendChild(iframe);
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+  domainData('http://b.com/data.html', function (data) {
+    alert(data);
+  });
+</script>
+
+</html>
