@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div><%= content %></div>
+    <span><%= out %></span>
+  </body>
+</html>
+
+<script>
+    const div = document.getElementsByTagName('div')[0];
+    div.onclick = function () {
+      window.location = '/sign_in';
+    }
+    const span = document.getElementsByTagName('span')[0];
+    span.onclick = function () {
+      window.location = '/sign_out';
+    }
+
+</script>

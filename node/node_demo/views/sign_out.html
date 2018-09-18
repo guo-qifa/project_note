@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body>
+
+    <h1>确定要退出</h1>
+    <div><%= title %></div>
+  </body>
+  <script>
+    const div = document.getElementsByTagName('div')[0];
+    div.onclick = function () {
+      window.location = '/';
+    }
+
+  </script>
+</html>
